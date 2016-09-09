@@ -1,6 +1,7 @@
 package com.application.cms.config;
 
 import com.application.cms.config.locale.AngularCookieLocaleResolver;
+import com.application.cms.web.interceptor.ThymeleafLayoutInterceptor;
 
 import org.springframework.boot.bind.RelaxedPropertyResolver;
 import org.springframework.context.EnvironmentAware;
@@ -35,5 +36,7 @@ public class LocaleConfiguration extends WebMvcConfigurerAdapter implements Envi
         LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
         localeChangeInterceptor.setParamName("language");
         registry.addInterceptor(localeChangeInterceptor);
+        
+        registry.addInterceptor(new ThymeleafLayoutInterceptor());
     }
 }
