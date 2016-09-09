@@ -1,0 +1,77 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "menu",
+            "otherEntityName": "menu",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "submenu",
+            "otherEntityName": "menu",
+            "otherEntityRelationshipName": "menu"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "type",
+            "otherEntityName": "menuType",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "access",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "alias",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "home",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "img",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "level",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "link",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "params",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "path",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "published",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160907042751",
+    "entityTableName": "menu",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

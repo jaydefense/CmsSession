@@ -1,0 +1,10 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [],
+    "changelogDate": "20160907042747",
+    "entityTableName": "abstract_auditing_entity",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

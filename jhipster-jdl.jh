@@ -1,0 +1,57 @@
+entity User {
+}
+
+
+entity Language {
+    label String required
+}
+entity Category {
+	title String required,
+    description String,
+    alltext  String
+}
+
+entity Content  {
+	title String required,
+	alias     String,
+    introtext String,
+	alltext  String
+}
+
+entity Menu  {
+	access Integer,
+    alias String,
+    home  Boolean,
+    img   String,
+    level Integer,
+    link  String,
+    params String,
+    path String,
+    published Boolean,
+    title String required,
+    description String
+}
+
+entity MenuType {
+	type String
+}
+entity Role {
+	role String
+}
+relationship OneToMany {
+	Category{content} to Content{category}
+}
+
+relationship ManyToOne {
+	Content{language} to Language,
+    	Menu{type} to MenuType
+}
+relationship OneToMany {
+	Menu{submenu} to Menu
+}
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+// Set an angular suffix

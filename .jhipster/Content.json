@@ -1,0 +1,43 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "language",
+            "otherEntityName": "language",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "category",
+            "otherEntityName": "category",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "alias",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "introtext",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "alltext",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160907042750",
+    "entityTableName": "content",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl"
+}
